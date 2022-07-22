@@ -3,6 +3,7 @@
 html {
   font-family: "Lato", sans-serif;
   color: #e7f6f2;
+  background-color: #2c3333;
 }
 
 * {
@@ -11,7 +12,7 @@ html {
 }
 
 @media (max-width: 762px) {
-  header .kontainer.header {
+  header .kontainer.headers {
     height: 30vh;
     flex-direction: column;
     justify-content: center;
@@ -29,7 +30,7 @@ html {
 }
 
 @media (min-width: 762px) {
-  header .kontainer.header {
+  header .kontainer.headers {
     justify-content: space-between;
   }
 }
@@ -46,13 +47,20 @@ html {
 }
 
 header {
+  transition: 0.5s;
   position: sticky;
+  background-color: transparent;
   top: 0px;
 }
 
-header .kontainer.header {
-  height: 10vh;
+header.sticky {
+  transition: 0.5s ease-out;
+  box-shadow: 0 0 10px #000;
   background-color: #395b64;
+}
+
+header .kontainer.headers {
+  height: 10vh;
   align-items: center;
   display: flex;
   padding: 0 1.5rem 0 3rem;
@@ -79,4 +87,5 @@ ul li a:hover {
 
 main {
   height: 200vh;
+  background-color: #2c3333;
 }
