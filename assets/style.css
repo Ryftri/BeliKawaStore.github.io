@@ -9,47 +9,16 @@ html {
 * {
   padding: 0;
   margin: 0;
-  animation: animasiMasuk 1s alternate;
-}
-
-@keyframes animasiMasuk {
-  0% {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@media (max-width: 762px) {
-  header .kontainer.headers {
-    height: 30vh;
-    flex-direction: column;
-    justify-content: center;
-    font-size: 0.7rem;
-  }
-
-  .logo h1 {
-    text-decoration: underline;
-  }
-
-  nav li a {
-    margin-top: 3px;
-    font-size: 0.7rem;
-  }
-}
-
-@media (min-width: 762px) {
-  header .kontainer.headers {
-    justify-content: space-between;
-  }
 }
 
 .logo h1 {
   cursor: pointer;
   transition: 0.5s ease-out;
+  animation: animasiMasuk 1s alternate;
+}
+
+nav ul {
+  animation: animasiMasuk 1s alternate;
 }
 
 .logo h1:hover {
@@ -73,6 +42,7 @@ header.sticky {
 
 header .kontainer.headers {
   height: 10vh;
+  justify-content: space-between;
   align-items: center;
   display: flex;
   padding: 0 1.5rem 0 3rem;
@@ -100,4 +70,33 @@ ul li a:hover {
 main {
   height: 200vh;
   background-color: #2c3333;
+}
+
+@media screen and (max-width: 762px) {
+  header .kontainer.headers {
+    height: 10vh;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 0.7rem;
+  }
+
+  .logo h1 {
+    text-decoration: underline;
+  }
+
+  nav li a {
+    margin-top: 3px;
+    font-size: 0.7rem;
+  }
+}
+
+@keyframes animasiMasuk {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
