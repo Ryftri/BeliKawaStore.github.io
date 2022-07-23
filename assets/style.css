@@ -101,7 +101,8 @@ main {
 
   nav li a {
     margin-top: 3px;
-    font-size: 0.7rem;
+    font-size: 1rem;
+    margin-left: 2.5rem;
   }
 
   .hamburger {
@@ -122,6 +123,7 @@ main {
 
   ul {
     margin-top: 15px;
+    height: 35%;
     display: flex;
     position: fixed;
     left: -100%;
@@ -133,10 +135,12 @@ main {
     transition: 0.5s;
     z-index: auto;
     opacity: 0;
+    justify-content: space-evenly;
+    margin-top: -10px;
   }
 
-  li {
-    margin: 16px 0;
+  .logo {
+    z-index: 1;
   }
 
   ul.active {
